@@ -1,0 +1,27 @@
+#include<conio.h>
+#include<stdio.h>
+main()
+{
+int len,i,j;
+int fp,lp;
+
+    printf("enter no. of lines you want\n");
+    scanf("%d",&len);
+    printf("\n");
+
+    fp = lp = len-1;
+   
+    for(i=0; i<len; i++)
+    {
+        for(j=0; j<2*len-1; j++)
+        {
+            if(j>=fp && j<=lp)
+                printf("*",j);
+            else
+                printf(" ");
+        }
+        fp-- ,lp++;
+
+        printf("\n");
+    }
+}
